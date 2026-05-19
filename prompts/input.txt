@@ -1,0 +1,100 @@
+## Input Parameters
+
+STYLE_COUNTRY=USA
+STYLE_HEIGHT=170
+STYLE_WEIGHT=65
+STYLE_OCCASION=Business Casual
+STYLE_TIME=Afternoon
+
+## Output Schema
+
+"complete_outfits": [
+  {
+    "name": "string (e.g., 'Business Casual Friday')",
+    "description": "string (overall description of the complete look)",
+    "occasion_type": "same as top_recommendations (e.g., 'business_casual')",
+    "season": ["Spring | Summer | Autumn | Winter - at least one"],
+    "body_shape": ["Hourglass | Apple | Pear | Rectangle | Inverted Triangle - list all suitable]"],
+    "top": {
+      "category": "tshirt | shirt | blouse | polo | tank_top | sweater | hoodie | cardigan | blazer | jacket | coat | vest | crop_top | tunic | dress | jumpsuit | romper",
+      "name": "string",
+      "description": "string",
+      "color": "string",
+      "hex_code": "#RRGGBB",
+      "fabric": "string",
+      "fit": "slim | regular | relaxed | oversized | tailored",
+      "neckline": "string",
+      "sleeve_length": "short | 3/4 | long | extra_long",
+      "pattern": "string or null",
+      "occasion_suitability": ["..."],
+      "season_suitability": ["..."],
+      "body_shape_suitability": ["..."],
+      "styling_tips": ["..."]
+    },
+    "bottom": {
+      "category": "pants | jeans | trousers | shorts | skirt | leggings | joggers | chinos | slacks | culottes | palazzo | wide_leg_pants | skinny_pants | cargo_pants",
+      "name": "string",
+      "description": "string",
+      "color": "string",
+      "hex_code": "#RRGGBB",
+      "fabric": "string",
+      "fit": "slim | skinny | straight | regular | relaxed | loose | wide_leg | cropped",
+      "waist_type": "string",
+      "length": "string",
+      "pattern": "string or null",
+      "occasion_suitability": ["..."],
+      "season_suitability": ["..."],
+      "body_shape_suitability": ["..."],
+      "styling_tips": ["..."]
+    } or null,
+    "footwear": {
+      "category": "sneakers | loafers | heels | flats | sandals | boots | flip_flops | pumps | ballerinas | oxford | espadrilles | mules | slip_on | ankle_boots | loafers_women | platform | wedge",
+      "name": "string",
+      "description": "string",
+      "color": "string",
+      "hex_code": "#RRGGBB",
+      "material": "string",
+      "heel_height": "string",
+      "occasion_suitability": ["..."],
+      "season_suitability": ["..."],
+      "styling_tips": ["..."]
+    },
+    "outerwear": {
+      "category": "tshirt | shirt | blouse | polo | sweater | hoodie | cardigan | blazer | jacket | coat | vest",
+      "name": "string",
+      "description": "string",
+      "color": "string",
+      "hex_code": "#RRGGBB",
+      "fabric": "string",
+      "fit": "slim | regular | relaxed | oversized",
+      "warmth_level": "light | medium | heavy | extra_heavy",
+      "length": "short (waist) | regular (hip) | long (thigh) | maxi (calf)",
+      "occasion_suitability": ["..."],
+      "season_suitability": ["..."],
+      "styling_tips": ["..."]
+    } or null,
+    "accessories": [
+      {
+        "category": "watch | ring | necklace | bracelet | earrings | bag | belt | scarf | hat | sunglasses | tie | bow_tie | cufflinks | pocket_square | hair_accessory | brooch | wallet",
+        "name": "string",
+        "description": "string",
+        "color": "string or null",
+        "hex_code": "#RRGGBB or null",
+        "material": "string or null",
+        "metal_type": "string or null",
+        "stone": "string or null",
+        "occasion_suitability": ["..."],
+        "styling_tips": ["..."]
+      }
+    ] or null,
+    "overall_color_palette": [
+      {
+        "color_name": "string (e.g., 'Ivory White')",
+        "hex_code": "#RRGGBB (e.g., '#FFFFF0')",
+        "reason": "string (e.g., 'Base neutral that anchors the outfit and complements warm undertone')"
+      }
+    ],
+    "styling_tips": ["string array"],
+    "why_this_outfit": "string (2-3 sentence explanation)"
+  }
+]

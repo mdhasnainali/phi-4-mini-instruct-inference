@@ -1,0 +1,15 @@
+[project]
+name = "phi-4-mini-inference"
+version = "0.1.0"
+description = "Outfit recommendation inference with Phi-4-mini GGUF"
+requires-python = ">=3.10"
+dependencies = [
+    "llama-cpp-python>=0.2.90",
+    "huggingface-hub>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = []
+
+[tool.uv]
+index-url = "https://pypi.org/simple"
